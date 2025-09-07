@@ -280,6 +280,15 @@ margin-bottom: 40px;
 }
 
 /* ---------------- CONTATO ---------------- */
+ul{ 
+  list-style-type: none;
+}
+.insta{ 
+    margin-left: -110px;
+}
+.wp{  
+    margin-left: -55px;
+}
 .contato {
   padding: 80px 50px;
   text-align: center;
