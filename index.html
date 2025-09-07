@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfólio Fotógrafo</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Fontes Google -->
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;1,400&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Cabeçalho -->
+  <header>
+    <h1 class="logo">
+      <img src="img/logo.png" alt="Logo">
+    </h1>
+
+    <!-- Botão Hamburguer -->
+    <button class="hamburguer" id="hamburguer">&#9776;</button>
+
+    <nav>
+      <div class="menu" id="menu">
+        <a href="#home">Início</a>
+        <a href="#sobre">Quem sou eu</a>
+        <a href="#portfolio">Portfólio</a>
+        <a href="#contato">Contato</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Home -->
+  <section id="home" class="hero">
+    <div class="carousel">
+      <div class="carousel-track">
+        <img src="img/cha0.jpg" alt="Portfólio 1">
+        <img src="img/cha00.jpg" alt="Portfólio 2">
+        <img src="img/cha1.jpg" alt="Portfólio 3">
+        <img src="img/cha2.jpg" alt="Portfólio 4">
+        <img src="img/cha3.jpg" alt="Portfólio 5">
+        <img src="img/cha4.jpg" alt="Portfólio 6">
+        <img src="img/cha5.jpg" alt="Portfólio 7">
+      </div>
+    </div>
+  </section>
+
+  <!-- Quem sou eu -->
+  <section id="sobre" class="sobre">
+    <div class="texto">
+      <h2>Quem sou eu</h2>
+      <p>
+        “A fotografia é a arte de transformar segundos em eternidade,  
+        de revelar sentimentos através da luz e da sombra.”
+      </p>
+    </div>
+
+    <!-- Slideshow -->
+    <div class="slideshow">
+      <div class="slides">
+        <img src="img/artur.jpg" alt="Foto 1">
+        <img src="img/artur1.jpg" alt="Foto 2">
+        <img src="img/artur2.jpg" alt="Foto 3">
+      </div>
+      <button class="prev" onclick="plusSlides(-1)">&#10094;</button>
+      <button class="next" onclick="plusSlides(1)">&#10095;</button>
+    </div>
+  </section>
+
+  <!-- Portfólio -->
+
+  <section id="portfolio" class="portfolio">
+    <h2>Portfólio</h2>
+    <div class="cards-carousel">
+      <div class="cards-track">
+        <div class="card">
+          <img src="img/cha1.jpg" alt="Esportes">
+          <h3>Esportes</h3>
+          <p>Capturando a energia e a paixão de cada movimento. </p>
+        </div>
+        <div class="card">
+          <img src="img/cha2.jpg" alt="Casamentos">
+          <h3>Casamentos</h3>
+          <p>Momentos inesquecíveis transformados em memórias eternas. </p>
+        </div>
+        <div class="card">
+          <img src="img/cha3.jpg" alt="Infantil">
+          <h3>Infantil</h3>
+          <p>A magia e a inocência da infância em cliques cheios de vida.</p>
+        </div>
+        <div class="card">
+          <img src="img/cha4.jpg" alt="Eventos">
+          <h3>Eventos</h3>
+          <p>A atmosfera, as emoções e os detalhes que fazem a diferença.</p>
+        </div>
+        <div class="card">
+          <img src="img/cha5.jpg" alt="Retratos">
+          <h3>Retratos</h3>
+          <p>Explorando a essência e a personalidade por trás do olhar.</p>
+        </div>
+      </div>
+      <button class="portfolio-btn prev-btn">&#10094;</button>
+      <button class="portfolio-btn next-btn">&#10095;</button>
+    </div>
+  </section>
+
+  <!-- Contato -->
+  <section id="contato" class="contato">
+    <h2>Contato</h2>
+    <p>Email: <a href="mailto:email@fotografo.com">email@fotografo.com</a></p>
+    <p>Instagram: <a href="#">@seuinstagram</a></p>
+  </section>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+
+</body>
+</html>
