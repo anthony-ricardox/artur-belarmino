@@ -10,6 +10,7 @@
 
   <!-- Fontes Google -->
   <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;1,400&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
 </head>
 <body>
 
@@ -60,51 +61,51 @@
     <!-- Slideshow -->
     <div class="slideshow">
       <div class="slides">
-        <img src="img/artur.jpg" alt="Foto 1">
-        <img src="img/artur1.jpg" alt="Foto 2">
-        <img src="img/artur2.jpg" alt="Foto 3">
+        <img src="img/artur2.jpg" alt="Foto 1">
+        <img src="img/artur.jpg" alt="Foto 2">
+        <img src="img/artur1.jpg" alt="Foto 3">
       </div>
       <button class="prev" onclick="plusSlides(-1)">&#10094;</button>
       <button class="next" onclick="plusSlides(1)">&#10095;</button>
     </div>
   </section>
 
-  <!-- Portfólio -->
 
-  <section id="portfolio" class="portfolio">
-    <h2>Portfólio</h2>
-    <div class="cards-carousel">
-      <div class="cards-track">
-        <div class="card">
-          <img src="img/cha1.jpg" alt="Esportes">
-          <h3>Esportes</h3>
-          <p>Capturando a energia e a paixão de cada movimento. </p>
-        </div>
-        <div class="card">
-          <img src="img/cha2.jpg" alt="Casamentos">
-          <h3>Casamentos</h3>
-          <p>Momentos inesquecíveis transformados em memórias eternas. </p>
-        </div>
-        <div class="card">
-          <img src="img/cha3.jpg" alt="Infantil">
-          <h3>Infantil</h3>
-          <p>A magia e a inocência da infância em cliques cheios de vida.</p>
-        </div>
-        <div class="card">
-          <img src="img/cha4.jpg" alt="Eventos">
-          <h3>Eventos</h3>
-          <p>A atmosfera, as emoções e os detalhes que fazem a diferença.</p>
-        </div>
-        <div class="card">
-          <img src="img/cha5.jpg" alt="Retratos">
-          <h3>Retratos</h3>
-          <p>Explorando a essência e a personalidade por trás do olhar.</p>
-        </div>
-      </div>
-      <button class="portfolio-btn prev-btn">&#10094;</button>
-      <button class="portfolio-btn next-btn">&#10095;</button>
-    </div>
-  </section>
+ <!-- =================== PORTFÓLIO =================== -->
+<section class="portfolio" id="portfolio">
+  <h2>Portfólio</h2>
+
+  <div class="cards-carousel">
+    <div class="cards-track">
+      <div class="card">
+        <a href="infantil.html"><img src="img/cha3.jpg" alt="Foto 1"></a>
+        <h3>infantil</h3>
+        <p>A magia da infância em cada clique.</p>
+      </div>
+
+      <div class="card">
+        <a href="casamento.html" target="_self"> <img src="img/cha2.jpg" alt="Foto 2"> </a>
+        <h3>Casamentos</h3>
+        <p>O amor em cada detalhe.</p>
+      </div>
+
+      <div class="card">
+        <a href="sportes.html"><img src="img/cha0.jpg" alt="Foto 3"></a>
+        <h3>Sportes</h3>
+        <p>Mais que fotos, eu capturo a adrenalina, a garra e o esforço que levam à vitória.</p>
+      </div>
+
+      <div class="card">
+        <a href=""><img src="img/portfolio4.jpg" alt="Foto 4"></a>
+        <h3>Ensaio</h3>
+        <p>Descrição curta do trabalho.</p>
+      </div>
+
+      <!-- Pode adicionar quantos cards quiser -->
+    </div>
+  </div>
+</section>
+
 
   <!-- Contato -->
   <section id="contato" class="contato">
