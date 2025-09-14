@@ -42,6 +42,7 @@ header {
 }
 
 /* NAV MENU DESKTOP */
+
 nav .menu {
   display: flex;
   gap: 25px;
@@ -49,18 +50,40 @@ nav .menu {
 }
 
 .menu a {
-  color: #fff;
+  position: relative; /* necessário pro ::after */
+  color: #ffffffb2;
   font-family: 'Montserrat', sans-serif;
   font-size: 18px;
   font-style: italic;
   letter-spacing: 1px;
+  text-decoration: none; /* tira o underline padrão */
+  padding-bottom: 3px;   /* espaço pro underline */
+  transition: color 0.3s ease; /* transição da cor */
+
+  font-weight: bold;
+}
+
+.menu a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px; /* espessura do underline */
+  background-color: rgba(252, 252, 252, 0.61); /* cor do underline */
+  transition: width 1s ease; /* controla a velocidade */
 }
 
 .menu a:hover {
-  color: aquamarine;
-  text-decoration: underline;
-  transition-duration: 1s;
+  color: rgba(127, 255, 212, 0.767);
 }
+
+.menu a:hover::after {
+  width: 100%; /* underline cresce */
+}
+
+
+
 
 /* BOTÃO HAMBURGUER (ESCONDIDO POR PADRÃO) */
 .hamburguer {
@@ -82,7 +105,7 @@ nav .menu {
 
 #hamburguer:active{ 
   color: aquamarine;
-  font-size: 26px;
+  font-size: 25px;
   transition-duration: 10ms;
   
 }
@@ -101,6 +124,7 @@ nav .menu {
   font-size: 36px;
   padding: 20px;
   letter-spacing: 2px;
+
 }
 
 /* ---------------- SOBRE ---------------- */
@@ -111,6 +135,7 @@ nav .menu {
   padding-top: 20vh;
   gap: 40px;
   background: #fff;
+  
 }
 
 .sobre .texto {
@@ -172,12 +197,14 @@ nav .menu {
   text-align: center;
   background: #000;
   color: #f8f8f8;
+  
 }
 
 .portfolio h2 {
   font-family: 'Montserrat', sans-serif;
   font-size: 26px;
   margin-bottom: 40px;
+  color: rgba(255, 255, 255, 0.589);
 }
 
 .carousel {
@@ -212,6 +239,7 @@ nav .menu {
   text-align: center;
   background: #000;
   color: #f8f8f8;
+  padding-bottom: 10%;
 }
 
 .portfolio h2 {
@@ -263,6 +291,7 @@ nav .menu {
   font-size: 2vw;
   margin: 15px 15px 5px;
   text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.781);
 }
 
 .card p {
@@ -270,7 +299,7 @@ nav .menu {
   font-style: italic;
   font-size: 2vw;
   margin: 0 15px 15px;
-  color: #ccc;
+  color: #cccccca1;
 }
 
 .portfolio-btn {
@@ -300,40 +329,113 @@ nav .menu {
   right: -10px;
 }
 
-/* ---------------- CONTATO ---------------- */
-ul { 
-  list-style-type: none;
-}
 
-.insta { 
-  margin-left: -110px;
-}
 
-.wp{  
-  margin-left: -55px;
-}
-
+/* ----------CONTATO---------------- */
 .contato {
   padding: 80px 50px;
   text-align: center;
-  background: #000;
-  color: #fff;
+  background: #000;   
+  color: #ffffffd8;
+  
 }
 
-.contato h2 {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 22px;
+.contato h2 {  
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.contato p.subtitulo {
+  font-size: 1rem;
+  color: #ccc;
+  margin-bottom: 40px;
+}
+
+/* Container dos cards */
+.contato-cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.contato-card {
+  background: #111;
+  padding: 30px 20px;
+  border-radius: 12px;
+  width: 200px;
+  height: 200px;
+  text-align: center;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contato-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.2);
+}
+
+.contato-card i {
+  font-size: 2.2rem;
   margin-bottom: 15px;
+  color: #ffffff;
 }
 
-.contato a {
-  color: rgb(151, 150, 150);
+.contato-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+  font-weight: bold;
 }
 
-.contato a:hover { 
-  color: aquamarine;
-  transition-duration: 1.2s;
+.contato-card p {
+  font-size: 0.95rem;
+  color: #bbb;
+  margin-bottom: 5px;
 }
+
+/* Botões personalizados */
+.btn-contato {
+  display: inline-block;
+  padding: 10px 10px;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.btn-email {
+  background: #7fffd4;
+  color: #000;
+  
+}
+#email{ 
+   margin-top: 5px;
+}
+.btn-email:hover {
+  background: #5ed6b3;
+}
+
+.btn-insta {
+  background: #d3a8ff;
+  color: #000;
+}
+
+.btn-insta:hover {
+  background: #b97afc;
+}
+
+.btn-whats {
+  background: #90ee90;
+  color: #000;
+}
+
+.btn-whats:hover {
+  background: #6ed36e;
+}
+
+
+
 
 /* ---------------- RESPONSIVIDADE ---------------- */
 @media (max-width: 700px) {
@@ -411,4 +513,8 @@ ul {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+body{ 
+  background-color: #000;
 }
