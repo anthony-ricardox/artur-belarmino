@@ -4,6 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfólio Fotógrafo</title>
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+
+  <!-- Meta tags para redes sociais -->
+  <meta property="og:title" content="Portfólio Fotógrafo">
+  <meta property="og:description" content="A arte de transformar segundos em eternidade. Confira o portfólio de Artur Belarmino.">
+  <meta property="og:image" content="https://anthony-ricardox.github.io/artur-belarmino/img/artur-b.jpg">
+  <meta property="og:url" content="https://anthony-ricardox.github.io/artur-belarmino/">
 
   <!-- CSS -->
   <link rel="stylesheet" href="style.css">
@@ -16,7 +23,7 @@
   <!-- Cabeçalho -->
   <header>
     <h1 class="logo">
-      <img src="img/logo.png" alt="Logo">
+      <img src="img/logo-artur2.jpeg" alt="Logo">
     </h1>
 
     <!-- Botão Hamburguer -->
@@ -24,13 +31,14 @@
 
     <nav>
       <div class="menu" id="menu">
-        <a href="index.html">Início</a>
-        <a href="index.html">Quem sou eu</a>
-        <a href="index.html">Portfólio</a>
+        <a href="#home">Início</a>
+        <a href="#sobre">Quem sou eu</a>
+        <a href="#portfolio">Portfólio</a>
         <a href="#contato">Contato</a>
       </div>
     </nav>
   </header>
+
 
         <!-- FOTOS DAS SEÇÕES -->
 
@@ -38,17 +46,38 @@
 
   
 
-    <section id="contato" class="contato">
+  <!-- Contato -->
+  <section id="contato" class="contato">
     <h2>Contato</h2>
-   <ul>
-     
-     <li>  Email: <a href="mailto:contact.xartuur@gmail.com">contact.xartuur@gmail.com</a> </li>
-     <li class="insta">  Intagram: <a href="https://www.instagram.com/xartuur/" target="_blank"> @xartuur</a> </li>
+    <p class="subtitulo">Estamos prontos para te atender!</p>
 
-      <li class="wp"> Whatsap: <a href="//wa.me/8194872398"target="_blank"> +55 81 9487-2398</a> </li>
-   </ul>
+    <div class="contato-cards">
+      <!-- Card Email -->
+      <div class="contato-card">
+        <h3><img src="img/icons8-nova-mensagem-60.png" alt=""></h3>
+        <p>Entre em contato por e-mail.</p>
+        <a href="mailto:contact.xartuur@gmail.com" class="btn-contato btn-email" id="email">Enviar Mensagem</a>
+      </div>
 
+      <!-- Card Instagram -->
+      <div class="contato-card">
+        <h3><img src="img/icons8-instagram-48.png" alt=""></h3>
+        <p>Siga e acompanhe meu trabalho.</p>
+        <a href="https://www.instagram.com/xartuur/" target="_blank" class="btn-contato btn-insta">Seguir</a>
+      </div>
+
+      <!-- Card WhatsApp -->
+      <div class="contato-card">
+        <h3><img src="img/icons8-whatsapp-50.png" alt=""></h3>
+        <p>Converse direto comigo.</p>
+        <a href="https://wa.me/558194872398?text=Oi,%20vi%20seu%20portfólio%20e%20gostaria%20de%20saber%20mais%20sobre%20os%20pacotes%20de%20fotografia." target="_blank" class="btn-contato btn-whats">Conversar</a>
+      </div>
+    </div>
   </section>
+
+  <footer>
+    <p> anthony-ricardox</p>
+  </footer>>
 
    <!-- JavaScript -->
   <script src="script.js"></script>

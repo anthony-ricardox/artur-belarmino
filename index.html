@@ -1,31 +1,33 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfólio Fotógrafo</title>
-  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfólio Fotógrafo</title>
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
 
+  <!-- Meta tags para redes sociais -->
   <meta property="og:title" content="Portfólio Fotógrafo">
   <meta property="og:description" content="A arte de transformar segundos em eternidade. Confira o portfólio de Artur Belarmino.">
   <meta property="og:image" content="https://anthony-ricardox.github.io/artur-belarmino/img/artur-b.jpg">
   <meta property="og:url" content="https://anthony-ricardox.github.io/artur-belarmino/">
 
-    <link rel="stylesheet" href="style.css">
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
 
-    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;1,400&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-
+  <!-- Fontes Google -->
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;1,400&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
   <!-- Cabeçalho -->
   <header>
     <h1 class="logo">
-      <img src="img/logo.png" alt="Logo">
+      <img src="img/logo-artur2.jpeg" alt="Logo">
     </h1>
 
     <!-- Botão Hamburguer -->
-   <button class="hamburguer" id="hamburguer">&#9776;</button>
+    <button class="hamburguer" id="hamburguer">&#9776;</button>
 
     <nav>
       <div class="menu" id="menu">
@@ -40,29 +42,25 @@
   <!-- Home -->
   <section id="home" class="hero">
     <div class="carousel">
+      <button class="home-btn prev">&#10094;</button>
       <div class="carousel-track">
         <img src="img/cha0.jpg" alt="Portfólio 1" loading="lazy">
-        <img src="img/cha00.jpg" alt="Portfólio 2"loading="lazy">
-        <img src="img/cha1.jpg" alt="Portfólio 3"loading="lazy">
-        <img src="img/cha2.jpg" alt="Portfólio 4"loading="lazy">
-        <img src="img/cha3.jpg" alt="Portfólio 5"loading="lazy">
-        <img src="img/cha4.jpg" alt="Portfólio 6"loading="lazy">
-        <img src="img/cha5.jpg" alt="Portfólio 7"loading="lazy">
+        <img src="img/cha00.jpg" alt="Portfólio 2" loading="lazy">
+        <img src="img/cha1.jpg" alt="Portfólio 3" loading="lazy">
+        <img src="img/cha2.jpg" alt="Portfólio 4" loading="lazy">
+        <img src="img/cha3.jpg" alt="Portfólio 5" loading="lazy">
+        <img src="img/cha4.jpg" alt="Portfólio 6" loading="lazy">
+        <img src="img/cha5.jpg" alt="Portfólio 7" loading="lazy">
       </div>
+      <button class="home-btn next">&#10095;</button>
     </div>
-
-    
   </section>
 
   <!-- Quem sou eu -->
-
   <section id="sobre" class="sobre">
     <div class="texto">
       <h2>Quem sou eu</h2>
-      <p>
-        “A fotografia é a arte de transformar segundos em eternidade,  
-        de revelar sentimentos através da luz e da sombra.”
-      </p>
+      <p>“A fotografia é a arte de transformar segundos em eternidade, de revelar sentimentos através da luz e da sombra.”</p>
     </div>
 
     <!-- Slideshow -->
@@ -79,96 +77,75 @@
   </section>
 
   <!-- =================== PORTFÓLIO =================== -->
-<section class="portfolio" id="portfolio">
-  <h2> Portfólio  </h2>
+  <section class="portfolio" id="portfolio">
+    <h2> Portfólio </h2>
+    <div class="cards-carousel">
+      <button class="portfolio-btn prev-btn">&#10094;</button>
+      <div class="cards-track">
+        <div class="card">
+          <a href="infantil.html"><img src="img/cha3.jpg" alt="Foto 1"></a>
+          <h3>Aniversário</h3>
+          <p>A magia da infância em cada clique.</p>
+        </div>
+        <div class="card">
+          <a href="casamento.html" target="_self"><img src="img/cha2.jpg" alt="Foto 2"></a>
+          <h3>Gestante</h3>
+          <p>O amor em cada detalhe.</p>
+        </div>
+        <div class="card">
+          <a href="sportes.html"><img src="img/cha0.jpg" alt="Foto 3"></a>
+          <h3>Esportes</h3>
+          <p>Adrenalina, garra e esforço em cada clique.</p>
+        </div>
+        <div class="card">
+          <a href="#"><img src="img/cha4.jpg" alt="Foto 4"></a>
+          <h3>Noivado</h3>
+          <p>Descrição curta do trabalho.</p>
+        </div>
+        <div class="card">
+          <a href="#"><img src="img/cha5.jpg" alt="Foto 5"></a>
+          <h3>Ensaio</h3>
+          <p>Descrição curta do trabalho.</p>
+        </div>
+      </div>
+      <button class="portfolio-btn next-btn">&#10095;</button>
+    </div>
+  </section>
 
-  <div class="cards-carousel">
-    <button class="portfolio-btn prev-btn">&#10094;</button>
-    <div class="cards-track">
-      <div class="card">
-        <a href="infantil.html"><img src="img/cha3.jpg" alt="Foto 1"></a>
-        <h3>Infantil</h3>
-        <p>A magia da infância em cada clique.</p>
+  <!-- Contato -->
+  <section id="contato" class="contato">
+    <h2>Contato</h2>
+    <p class="subtitulo">Estamos prontos para te atender!</p>
+
+    <div class="contato-cards">
+      <!-- Card Email -->
+      <div class="contato-card">
+        <h3><img src="img/icons8-nova-mensagem-60.png" alt=""></h3>
+        <p>Entre em contato por e-mail.</p>
+        <a href="mailto:contact.xartuur@gmail.com" class="btn-contato btn-email" id="email">Enviar Mensagem</a>
       </div>
 
-      <div class="card">
-        <a href="casamento.html" target="_self"><img src="img/cha2.jpg" alt="Foto 2"></a>
-        <h3>Casamentos</h3>
-        <p>O amor em cada detalhe.</p>
+      <!-- Card Instagram -->
+      <div class="contato-card">
+        <h3><img src="img/icons8-instagram-48.png" alt=""></h3>
+        <p>Siga e acompanhe meu trabalho.</p>
+        <a href="https://www.instagram.com/xartuur/" target="_blank" class="btn-contato btn-insta">Seguir</a>
       </div>
 
-      <div class="card">
-        <a href="sportes.html"><img src="img/cha0.jpg" alt="Foto 3"></a>
-        <h3>Esportes</h3>
-        <p>Adrenalina, garra e esforço em cada clique.</p>
-      </div>
-
-      <div class="card">
-        <a href="#"><img src="img/cha4.jpg" alt="Foto 4"></a>
-        <h3>Ensaio</h3>
-        <p>Descrição curta do trabalho.</p>
-      </div>
-
-      <div class="card">
-        <a href="#"><img src="img/cha5.jpg" alt="Foto 5"></a>
-        <h3>Ensaio</h3>
-        <p>Descrição curta do trabalho.</p>
+      <!-- Card WhatsApp -->
+      <div class="contato-card">
+        <h3><img src="img/icons8-whatsapp-50.png" alt=""></h3>
+        <p>Converse direto comigo.</p>
+        <a href="https://wa.me/558194872398?text=Oi,%20vi%20seu%20portfólio%20e%20gostaria%20de%20saber%20mais%20sobre%20os%20pacotes%20de%20fotografia." target="_blank" class="btn-contato btn-whats">Conversar</a>
       </div>
     </div>
-    <button class="portfolio-btn next-btn">&#10095;</button>
-  </div>
-</section>
+  </section>
 
- 
-      <!-- Pode adicionar quantos cards quiser -->
-    </div>
-  </div>
-</section>
-
-
-
-<!-- Contato -->
-<section id="contato" class="contato">
-  <h2>Contato</h2>
-<p class="subtitulo">Estamos prontos para te atender!</p>
-
-  <div class="contato-cards">
-
-    <!-- Card Email -->
-    <div class="contato-card">
-      <i class="fas fa-envelope"></i>
-      <h3> <img src="img/icons8-nova-mensagem-60.png" alt=""></h3>
-      <p>Entre em contato por e-mail.</p>
-      <a href="mailto:contact.xartuur@gmail.com" class="btn-contato btn-email" id="email">Enviar Mensagem</a>
-    </div>
-
-    <!-- Card Instagram -->
-    <div class="contato-card">
-      <i class="fab fa-instagram"></i>
-      <h3><img src="img/icons8-instagram-48.png" alt=""></h3>
-      <p>Siga e acompanhe meu trabalho.</p>
-      <a href="https://www.instagram.com/xartuur/" target="_blank" class="btn-contato btn-insta">Seguir</a>
-    </div>
-
-    <!-- Card WhatsApp -->
-    <div class="contato-card">
-      <i class="fab fa-whatsapp"></i>
-      <h3> <img src="img/icons8-whatsapp-50.png" alt=""></h3>
-      <p>Converse direto comigo.</p>
-      <a href="https://wa.me/558194872398?text=Oi,%20vi%20seu%20portfólio%20e%20gostaria%20de%20saber%20mais%20sobre%20os%20pacotes%20de%20fotografia.
-" target="_blank" class="btn-contato btn-whats">Conversar</a>
-    </div>
-
-  </div>
-</section>
-
-<footer>
+  <footer>
     <p> anthony-ricardox</p>
-</footer>
-
+  </footer>
 
   <!-- JavaScript -->
   <script src="script.js"></script>
-
 </body>
 </html>

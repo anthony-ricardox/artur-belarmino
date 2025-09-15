@@ -1,8 +1,6 @@
-/* ---------------- RESET ---------------- */
+/* ---------------- RESET & FONTES ---------------- */
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
-
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
-
 
 * {
   margin: 0;
@@ -13,7 +11,7 @@
 body {
   font-family: 'Lora', serif;
   color: #000;
-  background: #fff;
+  background: #000;
   line-height: 1.6;
 }
 
@@ -41,8 +39,7 @@ header {
   height: 75px;
 }
 
-/* NAV MENU DESKTOP */
-
+/* ---------------- NAV MENU DESKTOP ---------------- */
 nav .menu {
   display: flex;
   gap: 25px;
@@ -50,17 +47,15 @@ nav .menu {
 }
 
 .menu a {
-  position: relative; /* necessário pro ::after */
+  position: relative;
   color: #ffffffb2;
   font-family: 'Montserrat', sans-serif;
   font-size: 18px;
   font-style: italic;
   letter-spacing: 1px;
-  text-decoration: none; /* tira o underline padrão */
-  padding-bottom: 3px;   /* espaço pro underline */
-  transition: color 0.3s ease; /* transição da cor */
-
   font-weight: bold;
+  padding-bottom: 3px;
+  transition: color 0.3s ease;
 }
 
 .menu a::after {
@@ -69,9 +64,9 @@ nav .menu {
   left: 0;
   bottom: 0;
   width: 0;
-  height: 2px; /* espessura do underline */
-  background-color: rgba(252, 252, 252, 0.61); /* cor do underline */
-  transition: width 1s ease; /* controla a velocidade */
+  height: 2px;
+  background-color: rgba(252, 252, 252, 0.61);
+  transition: width 1s ease;
 }
 
 .menu a:hover {
@@ -79,13 +74,10 @@ nav .menu {
 }
 
 .menu a:hover::after {
-  width: 100%; /* underline cresce */
+  width: 100%;
 }
 
-
-
-
-/* BOTÃO HAMBURGUER (ESCONDIDO POR PADRÃO) */
+/* ---------------- BOTÃO HAMBURGUER ---------------- */
 .hamburguer {
   display: none;
   font-size: 28px;
@@ -97,19 +89,16 @@ nav .menu {
   margin-left: 50%;
 }
 
-#hamburguer:hover{  
-   color: darkgray;
-   transition-duration: 1s;
-   
+#hamburguer:hover {
+  color: darkgray;
+  transition-duration: 1s;
 }
 
-#hamburguer:active{ 
+#hamburguer:active {
   color: aquamarine;
   font-size: 25px;
   transition-duration: 10ms;
-  
 }
-
 
 /* ---------------- HERO ---------------- */
 .hero {
@@ -124,7 +113,6 @@ nav .menu {
   font-size: 36px;
   padding: 20px;
   letter-spacing: 2px;
-
 }
 
 /* ---------------- SOBRE ---------------- */
@@ -134,8 +122,7 @@ nav .menu {
   padding: 100px 60px;
   padding-top: 20vh;
   gap: 40px;
-  background: #fff;
-  
+  background: #050505;
 }
 
 .sobre .texto {
@@ -144,6 +131,7 @@ nav .menu {
 }
 
 .sobre h2 {
+  color: #ccc;
   font-family: 'Montserrat', sans-serif;
   font-size: 26px;
   margin-bottom: 20px;
@@ -153,10 +141,10 @@ nav .menu {
 .sobre p {
   font-size: 18px;
   font-style: italic;
-  color: #333;
+  color: #ffffff;
 }
 
-/* SLIDESHOW */
+/* ---------------- SLIDESHOW ---------------- */
 .slideshow {
   flex: 1;
   position: relative;
@@ -197,7 +185,7 @@ nav .menu {
   text-align: center;
   background: #000;
   color: #f8f8f8;
-  
+  padding-bottom: 10%;
 }
 
 .portfolio h2 {
@@ -208,46 +196,52 @@ nav .menu {
 }
 
 .carousel {
+  position: relative;
+  width: 100%;
+  height: 100vh;
   overflow: hidden;
-  margin-top: 20px;
 }
 
 .carousel-track {
   display: flex;
-  gap: 20px;
-  animation: scroll 30s linear infinite;
+  height: 100%;
+  transition: transform 0.8s ease-in-out;
 }
 
 .carousel-track img {
-  width: 280px;
-  border-radius: 4px;
+  flex: 0 0 33.333%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
+
+.home-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  padding: 15px;
+  cursor: pointer;
+  font-size: 30px;
+  border-radius: 50%;
+  z-index: 5;
+  transition: background 0.3s;
+}
+
+.home-btn:hover {
+  background: rgba(0,0,0,0.8);
+}
+
+.home-btn.prev { left: 20px; }
+.home-btn.next { right: 20px; }
 
 .carousel-track img:hover {
   filter: grayscale(0%);
 }
 
-@keyframes scroll {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
-}
-
-/* ---------------- PORTFÓLIO - CARDS ---------------- */
-.portfolio {
-  padding: 100px 60px;
-  padding-top: 20vh;
-  text-align: center;
-  background: #000;
-  color: #f8f8f8;
-  padding-bottom: 10%;
-}
-
-.portfolio h2 {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 26px;
-  margin-bottom: 40px;
-}
-
+/* ---------------- PORTFÓLIO CARDS ---------------- */
 .cards-carousel {
   overflow: hidden;
   position: relative;
@@ -321,23 +315,15 @@ nav .menu {
   background: rgba(0, 0, 0, 0.8);
 }
 
-.prev-btn {
-  left: -10px;
-}
+.prev-btn { left: -10px; }
+.next-btn { right: -10px; }
 
-.next-btn {
-  right: -10px;
-}
-
-
-
-/* ----------CONTATO---------------- */
+/* ---------------- CONTATO ---------------- */
 .contato {
   padding: 80px 50px;
   text-align: center;
   background: #000;   
   color: #ffffffd8;
-  
 }
 
 .contato h2 {  
@@ -397,7 +383,7 @@ nav .menu {
 /* Botões personalizados */
 .btn-contato {
   display: inline-block;
-  padding: 10px 10px;
+  padding: 5px 10px;
   border-radius: 8px;
   font-weight: bold;
   text-decoration: none;
@@ -407,11 +393,14 @@ nav .menu {
 .btn-email {
   background: #7fffd4;
   color: #000;
-  
+  padding: 4px;
+
 }
+
 #email{ 
-   margin-top: 5px;
+  margin-top: 5px;
 }
+
 .btn-email:hover {
   background: #5ed6b3;
 }
@@ -434,21 +423,9 @@ nav .menu {
   background: #6ed36e;
 }
 
-
-
-
 /* ---------------- RESPONSIVIDADE ---------------- */
-@media (max-width: 700px) {
-  /* Estilo do menu em telas de tablets e notebooks pequenos */
-
-  nav .menu {
-    display: none;
-   
-  }
-  
-  .hamburguer {
-    display: block;
-  }
+@media (max-width: 1023px) {
+  .carousel-track img { flex: 0 0 50%; }
 }
 
 @media (max-width: 700px) {
@@ -456,15 +433,14 @@ nav .menu {
   .hero { font-size: 22px; }
   .sobre { flex-direction: column; align-items: center; }
   .carousel-track img { width: 200px; }
-}
 
+  nav .menu { display: none; }
+  .hamburguer { display: block; }
 
-@media (max-width: 700px) {
-  /* Estilos do menu hamburguer */
   nav .menu {
     position: fixed;
     top: 0;
-    left: -100%; /* para abrir da esquerda */
+    left: -100%;
     width: 30%;
     height: 100vh;
     background: black;
@@ -473,15 +449,12 @@ nav .menu {
     transition: left 0.3s ease-in-out;
     justify-content: center;
     align-items: center;
-    
-  }
-  nav a{  
-     margin-top: 20%;
-    
   }
 
+  nav a { margin-top: 20%; }
+
   nav .menu.active {
-    left: 0; /* Exibe o menu quando a classe 'active' é adicionada */
+    left: 0;
     display: flex;
   }
 
@@ -496,25 +469,23 @@ nav .menu {
     font-size: 2.5vw;
   }
 
-  /* Animação dos links */
   .menu.active a:nth-child(1) { animation-delay: 0.1s; }
   .menu.active a:nth-child(2) { animation-delay: 0.2s; }
   .menu.active a:nth-child(3) { animation-delay: 0.3s; }
   .menu.active a:nth-child(4) { animation-delay: 0.4s; }
 }
 
+/* ---------------- ANIMAÇÕES ---------------- */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(-10px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes slideIn {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  to { opacity: 1; transform: translateY(0); }
 }
 
-body{ 
-  background-color: #000;
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }

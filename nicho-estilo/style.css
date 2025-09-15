@@ -1,0 +1,266 @@
+body {
+    background-color: #000; /* Fundo preto que aparecerá no gap */
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Cabeçalho, navegação, contato e footer... (mantenha seu CSS original para essas seções) */
+/* ... */
+
+/* GALERIA */
+.gallery {
+    padding: 50px 0; /* Padding superior e inferior, laterais 0 para controlar no grid */
+    text-align: center;
+    background: #000; /* Garante que o fundo da seção seja preto */
+    color: #fff;
+}
+
+.gallery h2 {
+    font-size: 28px;
+    margin-bottom: 40px;
+    color: #fff;
+}
+
+.gallery-grid {
+    display: grid;
+    /* Define 3 colunas de largura igual para telas grandes */
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px; /* Espaço entre as fotos, revelando o fundo preto */
+    padding: 0 20px; /* Padding nas laterais da grade */
+    max-width: 1300px; /* Largura máxima da grade */
+    margin: 0 auto; /* Centraliza a grade na página */
+}
+
+/* Container para a imagem e o overlay da lupa */
+.gallery-item-wrapper {
+    position: relative; /* Essencial para posicionar o overlay */
+    overflow: hidden; /* Garante que nada saia dos limites */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Sombra para destaque */
+    cursor: pointer; /* Indica que é clicável */
+    display: flex; /* Para centralizar o ícone de lupa */
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: center; /* Centraliza horizontalmente */
+    transition: transform 0.3s ease-in-out;
+}
+
+.gallery-item-wrapper:hover {
+    transform: scale(1.03); /* Leve aumento no hover */
+}
+
+
+.gallery-item { /* A IMAGEM em si */
+    width: 100%;
+    height: 400px; /* Aumentei a altura para um layout mais impactante */
+    object-fit: cover; /* Garante que a imagem preencha o espaço sem distorcer */
+    display: block; /* Remove espaços extras */
+    transition: filter 0.3s ease-in-out;
+}
+
+.gallery-item-wrapper:hover .gallery-item {
+    filter: brightness(70%); /* Escurece a imagem ao passar o mouse */
+}
+
+/* Overlay com ícone de lupa */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Fundo semi-transparente para o overlay */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0; /* Escondido por padrão */
+    transition: opacity 0.3s ease-in-out;
+    pointer-events: none; /* Garante que o clique passe para o wrapper */
+}
+
+.gallery-item-wrapper:hover .overlay {
+    opacity: 1; /* Aparece ao passar o mouse */
+}
+
+.zoom-icon {
+    font-size: 48px; /* Tamanho da lupa */
+    color: #fff; /* Cor da lupa */
+    text-shadow: 0 0 10px rgba(0,0,0,0.7);
+}
+
+
+/* LIGHTBOX */
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.98);
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    backdrop-filter: blur(5px);
+    padding: 10px; /* Adiciona um pequeno padding geral para evitar que tudo grude nas bordas */
+    box-sizing: border-box; /* Garante que padding não adicione largura/altura */
+}
+
+.lightbox-content {
+    max-width: 90vw;
+    max-height: 90vh;
+    width: auto;
+    height: auto;
+    display: block;
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    margin: auto; /* Centraliza a imagem na lightbox */
+}
+
+.lightbox .close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    font-size: 40px;
+    color: #fff;
+    cursor: pointer;
+    transition: color 0.3s;
+    z-index: 2001;
+}
+
+.lightbox .image-counter {
+    position: absolute;
+    top: 25px;
+    left: 35px;
+    font-size: 18px;
+    color: #fff;
+    z-index: 2001;
+}
+
+.lightbox .prev,
+.lightbox .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 60px;
+    color: #fff;
+    cursor: pointer;
+    padding: 15px;
+    transition: color 0.3s, background-color 0.3s;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+    user-select: none;
+    z-index: 2001;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+}
+
+.lightbox .prev { left: 20px; }
+.lightbox .next { right: 20px; }
+
+.lightbox .prev:hover,
+.lightbox .next:hover,
+.lightbox .close:hover {
+    color: #7fffd4;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+
+/* Responsivo para a grade da galeria */
+@media (max-width: 992px) {
+    .gallery-grid {
+        /* Para telas medias, muda para 2 colunas */
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        padding: 0 15px;
+    }
+    .gallery-item {
+        height: 350px;
+    }
+    .lightbox .prev, .lightbox .next {
+        font-size: 50px;
+        padding: 10px;
+        width: 50px;
+        height: 50px;
+    }
+}
+
+@media (max-width: 768px) {
+    .gallery-grid {
+        /* Para tablets e celulares, muda para 1 coluna */
+        grid-template-columns: 1fr;
+        gap: 10px;
+        padding: 0 10px;
+    }
+    .gallery-item {
+        height: 250px;
+    }
+    .lightbox .prev, .lightbox .next {
+        font-size: 40px;
+        padding: 8px;
+        width: 40px;
+        height: 40px;
+        top: calc(50% + 20px);
+        background-color: rgba(0,0,0,0.6);
+    }
+    .lightbox .prev {
+        left: 10px;
+    }
+    .lightbox .next {
+        right: 10px;
+    }
+    .lightbox .close {
+        font-size: 35px;
+        right: 25px;
+        top: 15px;
+    }
+    .lightbox .image-counter {
+        font-size: 16px;
+        left: 25px;
+        top: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        padding: 0 10px;
+    }
+    .gallery-item {
+        height: 220px;
+    }
+    .lightbox .prev, .lightbox .next {
+        font-size: 30px;
+        padding: 5px;
+        width: 35px;
+        height: 35px;
+        top: calc(50% + 20px);
+        background-color: rgba(0,0,0,0.6);
+    }
+    .lightbox .prev {
+        left: 5px;
+    }
+    .lightbox .next {
+        right: 5px;
+    }
+    .lightbox .close {
+        font-size: 28px;
+        right: 15px;
+        top: 10px;
+    }
+    .lightbox .image-counter {
+        font-size: 14px;
+        left: 15px;
+        top: 15px;
+    }
+    .lightbox-content {
+        max-width: 95vw;
+        max-height: 85vh;
+    }
+}

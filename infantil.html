@@ -4,54 +4,93 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfólio Fotógrafo</title>
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
 
-  <!-- CSS -->
   <link rel="stylesheet" href="style.css">
-
-  <!-- Fontes Google -->
-  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;1,400&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="nicho-estilo/style.css"> <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;1,400&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <!-- Cabeçalho -->
   <header>
     <h1 class="logo">
-      <img src="img/logo.png" alt="Logo">
+      <img src="img/logo-artur2.jpeg" alt="Logo">
     </h1>
 
-    <!-- Botão Hamburguer -->
     <button class="hamburguer" id="hamburguer">&#9776;</button>
 
     <nav>
       <div class="menu" id="menu">
         <a href="index.html">Início</a>
-        <a href="index.html">Quem sou eu</a>
-        <a href="index.html">Portfólio</a>
         <a href="#contato">Contato</a>
       </div>
     </nav>
   </header>
 
-        <!-- FOTOS DAS SEÇÕES -->
-
-
-
-  
-
-    <section id="contato" class="contato">
-    <h2>Contato</h2>
-   <ul>
-     
-     <li>  Email: <a href="mailto:contact.xartuur@gmail.com">contact.xartuur@gmail.com</a> </li>
-     <li class="insta">  Intagram: <a href="https://www.instagram.com/xartuur/" target="_blank"> @xartuur</a> </li>
-
-      <li class="wp"> Whatsap: <a href="//wa.me/8194872398"target="_blank"> +55 81 9487-2398</a> </li>
-   </ul>
-
+  <section class="gallery">
+    <h2>Galeria</h2>
+    <div class="gallery-grid">
+      <div class="gallery-item-wrapper">
+        <img class="gallery-item" src="img/cha0.jpg" alt="Foto 1">
+        <div class="overlay"><span class="zoom-icon">&#128269;</span></div> </div>
+      <div class="gallery-item-wrapper">
+        <img class="gallery-item" src="img/cha1.jpg" alt="Foto 2">
+        <div class="overlay"><span class="zoom-icon">&#128269;</span></div>
+      </div>
+      <div class="gallery-item-wrapper">
+        <img class="gallery-item" src="img/cha2.jpg" alt="Foto 3">
+        <div class="overlay"><span class="zoom-icon">&#128269;</span></div>
+      </div>
+      <div class="gallery-item-wrapper">
+        <img class="gallery-item" src="img/cha3.jpg" alt="Foto 4">
+        <div class="overlay"><span class="zoom-icon">&#128269;</span></div>
+      </div>
+      <div class="gallery-item-wrapper">
+        <img class="gallery-item" src="img/cha4.jpg" alt="Foto 5">
+        <div class="overlay"><span class="zoom-icon">&#128269;</span></div>
+      </div>
+      <div class="gallery-item-wrapper">
+        <img class="gallery-item" src="img/cha5.jpg" alt="Foto 6">
+        <div class="overlay"><span class="zoom-icon">&#128269;</span></div>
+      </div>
+    </div>
   </section>
 
-   <!-- JavaScript -->
-  <script src="script.js"></script>
+  <section id="contato" class="contato">
+    <h2>Contato</h2>
+    <p class="subtitulo">Estamos prontos para te atender!</p>
 
+    <div class="contato-cards">
+      <div class="contato-card">
+        <h3><img src="img/icons8-nova-mensagem-60.png" alt=""></h3>
+        <p>Entre em contato por e-mail.</p>
+        <a href="mailto:contact.xartuur@gmail.com" class="btn-contato btn-email" id="email">Enviar Mensagem</a>
+      </div>
+
+      <div class="contato-card">
+        <h3><img src="img/icons8-instagram-48.png" alt=""></h3>
+        <p>Siga e acompanhe meu trabalho.</p>
+        <a href="https://www.instagram.com/xartuur/" target="_blank" class="btn-contato btn-insta">Seguir</a>
+      </div>
+
+      <div class="contato-card">
+        <h3><img src="img/icons8-whatsapp-50.png" alt=""></h3>
+        <p>Converse direto comigo.</p>
+        <a href="https://wa.me/558194872398?text=Oi,%20vi%20seu%20portfólio%20e%20gostaria%20de%20saber%20mais%20sobre%20os%20pacotes%20de%20fotografia." target="_blank" class="btn-contato btn-whats">Conversar</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>anthony-ricardox</p>
+  </footer>
+
+  <div id="lightbox" class="lightbox">
+    <span class="close">&times;</span>
+    <span class="image-counter" id="image-counter"></span> <img class="lightbox-content" id="lightbox-img">
+    <a class="prev">&#10094;</a>
+    <a class="next">&#10095;</a>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
