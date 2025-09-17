@@ -5,11 +5,7 @@ body {
     margin: 0;
     padding: 0;
 }
-
-/* Cabeçalho, navegação, contato e footer... (mantenha seu CSS original para essas seções) */
-/* ... */
-
-/* GALERIA */
+  
 .gallery {
     padding: 50px 0; /* Padding superior e inferior, laterais 0 para controlar no grid */
     text-align: center;
@@ -18,9 +14,10 @@ body {
 }
 
 .gallery h2 {
-    font-size: 28px;
+    font-size: 5vh;
     margin-bottom: 40px;
     color: #fff;
+    padding-top: 15%;
 }
 
 .gallery-grid {
