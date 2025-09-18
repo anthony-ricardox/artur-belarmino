@@ -319,117 +319,154 @@ nav .menu {
 .prev-btn { left: -10px; }
 .next-btn { right: -10px; }
 
-/* ---------------- CONTATO ---------------- */
-.contato {
-  padding: 80px 50px;
-  text-align: center;
-  background: #000;   
-  color: #ffffffd8;
+.contato-redes, .contato-form-section {
+    padding: 80px 50px;
+    text-align: center;
+    background: #000;
+    color: #ffffffd8;
+    padding-top: 25%;
 }
 
-.contato h2 {  
-  font-size: 2rem;
-  font-weight: bold;
-  margin-bottom: 10px;
+.contato-redes h2, .contato-form-section h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
 }
 
-.contato p.subtitulo {
-  font-size: 1rem;
-  color: #ccc;
-  margin-bottom: 40px;
+.contato-redes p.subtitulo, .contato-form-section p.subtitulo {
+    font-size: 1rem;
+    color: #ccc;
+    margin-bottom: 40px;
 }
 
-/* Container dos cards */
 .contato-cards {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
 }
 
 .contato-card {
-  background: #111;
-  padding: 30px 20px;
-  border-radius: 12px;
-  width: 200px;
-  height: 200px;
-  text-align: center;
-  box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: #111;
+    padding: 30px 20px;
+    border-radius: 12px;
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .contato-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 0 25px rgba(255, 255, 255, 0.2);
-}
-
-.contato-card i {
-  font-size: 2.2rem;
-  margin-bottom: 15px;
-  color: #ffffff;
+    transform: translateY(-5px);
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.2);
 }
 
 .contato-card h3 {
-  font-size: 1.2rem;
-  margin-bottom: 8px;
-  font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+    font-weight: bold;
 }
 
 .contato-card p {
-  font-size: 0.95rem;
-  color: #bbb;
-  margin-bottom: 5px;
+    font-size: 0.95rem;
+    color: #bbb;
+    margin-bottom: 5px;
 }
 
-/* Botões personalizados */
 .btn-contato {
-  display: inline-block;
-  padding: 5px 10px;
-  border-radius: 8px;
-  font-weight: bold;
-  text-decoration: none;
-  transition: background 0.3s ease;
-}
-
-.btn-email {
-  background: #7fffd4;
-  color: #000;
-  padding: 4px;
-
-}
-
-#email{ 
-  margin-top: 5px;
-}
-
-.btn-email:hover {
-  background: #5ed6b3;
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 8px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background 0.3s ease;
 }
 
 .btn-insta {
-  background: #d3a8ff;
-  color: #000;
+    background: #d3a8ff;
+    color: #000;
 }
 
 .btn-insta:hover {
-  background: #b97afc;
+    background: #b97afc;
 }
 
 .btn-whats {
-  background: #90ee90;
-  color: #000;
+    background: #90ee90;
+    color: #000;
 }
 
 .btn-whats:hover {
-  background: #6ed36e;
+    background: #6ed36e;
 }
 
+/* ---------------- ESTILOS DE FORMULÁRIO (CORRIGIDOS) ---------------- */
+#contactForm {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: left;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-size: 1rem;
+    margin-bottom: 5px;
+    color: #fff; /* Garante que a label seja visível */
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 12px;
+    border: 1px solid #444;
+    border-radius: 8px;
+    background-color: #222;
+    color: #fff; /* Garante que o texto digitado seja visível */
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #7fffd4;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+.submit-btn {
+    padding: 15px 25px;
+    background-color: #7fffd4;
+    color: #000;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #5ed6b3;
+    transform: translateY(-2px);
+}
 /* ---------------- RESPONSIVIDADE ---------------- */
 @media (max-width: 1023px) {
   .carousel-track img { flex: 0 0 50%; }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 768px) {
   header { padding: 15px 20px; }
   .hero { font-size: 22px; }
   .sobre { flex-direction: column; align-items: center; }
@@ -474,6 +511,9 @@ nav .menu {
   .menu.active a:nth-child(2) { animation-delay: 0.2s; }
   .menu.active a:nth-child(3) { animation-delay: 0.3s; }
   .menu.active a:nth-child(4) { animation-delay: 0.4s; }
+
+  /* Ajuste dos cards: 2 no mobile */
+  .card { width: calc(50% - 20px); }
 }
 
 /* ---------------- ANIMAÇÕES ---------------- */
@@ -489,4 +529,20 @@ nav .menu {
 @keyframes scroll {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
+}
+
+
+footer{ 
+  text-align: center;
+  background-color: #000000;
+  color: white;
+  width: 100%;
+  padding: 50px;
+  margin-top: -30px;
+}
+footer a{ 
+  color: #7fffd4;
+}
+footer a:hover{ 
+  color: rgba(0, 225, 255, 0.404);
 }

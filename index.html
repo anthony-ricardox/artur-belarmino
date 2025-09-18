@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfólio Fotógrafo</title>
-  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="img/logo-xartu.jpg" type="image/x-icon">
 
   <!-- Meta tags para redes sociais -->
   <meta property="og:title" content="Portfólio Fotógrafo">
@@ -83,12 +83,12 @@
       <button class="portfolio-btn prev-btn">&#10094;</button>
       <div class="cards-track">
         <div class="card">
-          <a href="infantil.html"><img src="aniversario/aniversario-5.jpg" alt="Foto 1"></a>
+          <a href="aniversario.html"><img src="aniversario/aniversario-5.jpg" alt="Foto 1"></a>
           <h3>Aniversário</h3>
           <p>A magia da infância em cada clique.</p>
         </div>
         <div class="card">
-          <a href="casamento.html" target="_self"><img src="img/cha2.jpg" alt="Foto 2"></a>
+          <a href="gestant.html" target="_self"><img src="img/cha2.jpg" alt="Foto 2"></a>
           <h3>Gestante</h3>
           <p>O amor em cada detalhe.</p>
         </div>
@@ -98,7 +98,7 @@
           <p>Adrenalina, garra e esforço em cada clique.</p>
         </div>
         <div class="card">
-          <a href="#"><img src="img/cha4.jpg" alt="Foto 4"></a>
+          <a href="noivado.html"><img src="noivado/n1.jpg" alt="Foto 4"></a>
           <h3>Noivado</h3>
           <p>Descrição curta do trabalho.</p>
         </div>
@@ -112,38 +112,49 @@
     </div>
   </section>
 
-  <!-- Contato -->
-  <section id="contato" class="contato">
-    <h2>Contato</h2>
+ <section id="contato" class="contato-redes">
+    <h2>Conecte-se Comigo</h2>
     <p class="subtitulo">Estamos prontos para te atender!</p>
-
     <div class="contato-cards">
-      <!-- Card Email -->
-      <div class="contato-card">
-        <h3><img src="img/icons8-nova-mensagem-60.png" alt=""></h3>
-        <p>Entre em contato por e-mail.</p>
-        <a href="mailto:contact.xartuur@gmail.com" class="btn-contato btn-email" id="email">Enviar Mensagem</a>
-      </div>
+        <div class="contato-card">
+            <h3><img src="img/icons8-instagram-48.png" onecte-se Comigo
+            Estamos prontos para te atender!alt="Instagram"></h3>
+            <p>Siga e acompanhe meu trabalho.</p>
+            <a href="https://www.instagram.com/xartuur/" target="_blank" class="btn-contato btn-insta">Seguir</a>
+        </div>
 
-      <!-- Card Instagram -->
-      <div class="contato-card">
-        <h3><img src="img/icons8-instagram-48.png" alt=""></h3>
-        <p>Siga e acompanhe meu trabalho.</p>
-        <a href="https://www.instagram.com/xartuur/" target="_blank" class="btn-contato btn-insta">Seguir</a>
-      </div>
-
-      <!-- Card WhatsApp -->
-      <div class="contato-card">
-        <h3><img src="img/icons8-whatsapp-50.png" alt=""></h3>
-        <p>Converse direto comigo.</p>
-        <a href="https://wa.me/558194872398?text=Oi,%20vi%20seu%20portfólio%20e%20gostaria%20de%20saber%20mais%20sobre%20os%20pacotes%20de%20fotografia." target="_blank" class="btn-contato btn-whats">Conversar</a>
-      </div>
+        <div class="contato-card">
+            <h3><img src="img/icons8-whatsapp-50.png" alt="WhatsApp"></h3>
+            <p>Converse direto comigo.</p>
+            <a href="https://wa.me/558194872398?text=Oi,%20vi%20seu%20portfólio%20e%20gostaria%20de%20saber%20mais%20sobre%20os%20pacotes%20de%20fotografia." target="_blank" class="btn-contato btn-whats">Conversar</a>
+        </div>
     </div>
-  </section>
+</section>
+
+<section id="formulario-contato" class="contato-form-section">
+    <h2>Envie uma Mensagem</h2>
+    <p class="subtitulo">Preencha o formulário para entrar em contato diretamente.</p>
+    <form id="contactForm" action="https://formspree.io/f/contact.xartuur@gmail.com" method="POST">
+        <div class="form-group">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+        </div>
+        <div class="form-group">
+            <label for="email-form">E-mail:</label>
+            <input type="email" id="email-form" name="_replyto" required>
+        </div>
+        <div class="form-group">
+            <label for="mensagem">Mensagem:</label>
+            <textarea id="mensagem" name="mensagem" required></textarea>
+        </div>
+        <button type="submit" class="submit-btn">Enviar</button>
+    </form>
+</section>
 
   <footer>
-    <p> anthony-ricardox</p>
-  </footer>
+    <p>Desenvolvido por: <a href="https://github.com/anthony-ricardox" target="_blank"> anthony ricardo</a>
+        </footer>
+    </p>
 
   <!-- JavaScript -->
   <script src="script.js"></script>

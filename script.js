@@ -83,11 +83,11 @@ if (cardsCarousel) {
             cardWidth = cards[0].offsetWidth + 30;
 
             if (window.innerWidth >= 1024) {
-                cardsInView = 1;
+                cardsInView = 1; // desktop
             } else if (window.innerWidth >= 768) {
-                cardsInView = 1;
+                cardsInView = 1; // tablet
             } else {
-                cardsInView = 1;
+                cardsInView = 1; // mobile
             }
         };
 
@@ -145,71 +145,68 @@ showSlides(slideIndex);
 
 
 // ---------------- LIGHTBOX ----------------
-const galleryItemWrappers = document.querySelectorAll('.gallery-item-wrapper');
-const lightbox = document.getElementById('lightbox');
-
-if (lightbox) {
+document.addEventListener('DOMContentLoaded', function() {
+    const lightbox = document.getElementById('lightbox');
     const lightboxImg = document.getElementById('lightbox-img');
-    const closeBtn = lightbox.querySelector('.close');
-    const prevBtn = lightbox.querySelector('.prev');
-    const nextBtn = lightbox.querySelector('.next');
+    const closeBtn = document.querySelector('.close');
+    const prevBtn = document.querySelector('.prev');
+    const nextBtn = document.querySelector('.next');
     const imageCounter = document.getElementById('image-counter');
-
+    const galleryItems = document.querySelectorAll('.gallery-item');
     let currentIndex = 0;
-    const totalImages = galleryItemWrappers.length;
 
-    const updateImageAndCounter = () => {
-        const currentImageSrc = galleryItemWrappers[currentIndex].querySelector('.gallery-item').src;
-        lightboxImg.src = currentImageSrc;
-        imageCounter.textContent = `${currentIndex + 1}/${totalImages}`;
-    };
-
-    const openLightbox = (index) => {
-        currentIndex = index;
-        lightbox.style.display = 'flex';
-        updateImageAndCounter();
-    };
-
-    const closeLightbox = () => {
-        lightbox.style.display = 'none';
-    };
-
-    const showNext = () => {
-        currentIndex = (currentIndex + 1) % totalImages;
-        updateImageAndCounter();
-    };
-
-    const showPrev = () => {
-        currentIndex = (currentIndex - 1 + totalImages) % totalImages;
-        updateImageAndCounter();
-    };
-
-    // Eventos
-    galleryItemWrappers.forEach((wrapper, index) => {
-        wrapper.addEventListener('click', () => openLightbox(index));
+    // Abrir o lightbox ao clicar em uma imagem
+    galleryItems.forEach((item, index) => {
+        item.addEventListener('click', () => {
+            currentIndex = index;
+            showImage(currentIndex);
+            lightbox.style.display = 'flex';
+        });
     });
 
-    closeBtn.addEventListener('click', closeLightbox);
-    nextBtn.addEventListener('click', showNext);
-    prevBtn.addEventListener('click', showPrev);
+    // Fechar o lightbox
+    closeBtn.addEventListener('click', () => {
+        lightbox.style.display = 'none';
+    });
 
-    // Fechar lightbox clicando fora da imagem
+    // Navegar para a imagem anterior
+    prevBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        currentIndex = (currentIndex - 1 + galleryItems.length) % galleryItems.length;
+        showImage(currentIndex);
+    });
+
+    // Navegar para a próxima imagem
+    nextBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        currentIndex = (currentIndex + 1) % galleryItems.length;
+        showImage(currentIndex);
+    });
+
+    // Exibir a imagem e o contador
+    function showImage(index) {
+        const imageUrl = galleryItems[index].src;
+        lightboxImg.src = imageUrl;
+        imageCounter.textContent = `${index + 1}/${galleryItems.length}`;
+    }
+
+    // Fechar o lightbox clicando fora da imagem
     lightbox.addEventListener('click', (e) => {
         if (e.target === lightbox) {
-            closeLightbox();
+            lightbox.style.display = 'none';
         }
     });
 
-    // Fechar com a tecla ESC e navegar com setas do teclado
+    // Navegar com as setas do teclado
     document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') {
-            closeLightbox();
-        }
-        if (e.key === 'ArrowLeft') {
-            showPrev();
-        }
-        if (e.key === 'ArrowRight') {
-            showNext();
+        if (lightbox.style.display === 'flex') {
+            if (e.key === 'ArrowLeft') {
+                prevBtn.click();
+            } else if (e.key === 'ArrowRight') {
+                nextBtn.click();
+            } else if (e.key === 'Escape') {
+                closeBtn.click();
+            }
         }
     });
-}
+});
