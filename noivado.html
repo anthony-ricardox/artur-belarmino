@@ -1,144 +1,123 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Noivado</title>
-  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="nicho-estilo/style.css"> 
-  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;1,400&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noivado</title>
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="nicho-estilo/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;1,400&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <header>
-    <h1 class="logo">
-      <img src="img/logo-xartu.jpg" alt="Logo">
-    </h1>
+    <header>
+        <h1 class="logo">
+            <img src="img/logo-xartu.jpg" alt="Logo">
+        </h1>
+        <button class="hamburguer" id="hamburguer">&#9776;</button>
+        <nav>
+            <div class="menu" id="menu">
+                <a href="index.html">Início</a>
+                <a href="#contato">Contato</a>
+            </div>
+        </nav>
+    </header>
 
-    <button class="hamburguer" id="hamburguer">&#9776;</button>
+    <section class="gallery">
+        <h2>Noivado</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item-wrapper">
+                <img class="gallery-item" src="noivado/n1.jpg" alt="Foto 1" loading="lazy">
+            </div>
+            <div class="gallery-item-wrapper">
+                <img class="gallery-item" src="noivado/n2.jpg" alt="Foto 2" loading="lazy">
+            </div>
+            <div class="gallery-item-wrapper">
+                <img class="gallery-item" src="noivado/n3.jpg" alt="Foto 3" loading="lazy">
+            </div>
+            <div class="gallery-item-wrapper">
+                <img class="gallery-item" src="noivado/n4.jpg" alt="Foto 4" loading="lazy">
+            </div>
+            <div class="gallery-item-wrapper">
+                <img class="gallery-item" src="noivado/n5.jpg" alt="Foto 5" loading="lazy">
+            </div>
+            <div class="gallery-item-wrapper">
+                <img class="gallery-item" src="noivado/n6.jpg" alt="Foto 6" loading="lazy">
+            </div>
+            <div class="gallery-item-wrapper">
+                <img class="gallery-item" src="noivado/pre1.jpeg" alt="Foto 7" loading="lazy">
+            </div>
+            <div class="gallery-item-wrapper">
+                <img class="gallery-item" src="noivado/pre2.jpeg" alt="Foto 8" loading="lazy">
+            </div>
+            <div class="gallery-item-wrapper">
+                <img class="gallery-item" src="noivado/pre3.jpeg" alt="Foto 9" loading="lazy">
+            </div>
+            <div class="gallery-item-wrapper">
+                <img class="gallery-item" src="noivado/pre4.jpeg" alt="Foto 10" loading="lazy">
+            </div>
+            <div class="gallery-item-wrapper">
+                <img class="gallery-item" src="noivado/pre5.jpeg" alt="Foto 11" loading="lazy">
+            </div>
+            <div class="gallery-item-wrapper">
+                <img class="gallery-item" src="noivado/pre6.jpeg" alt="Foto 12" loading="lazy">
+            </div>
+            <div class="gallery-item-wrapper">
+                <img class="gallery-item" src="noivado/pre7.jpeg" alt="Foto 13" loading="lazy">
+            </div>
+           
+    </section>
 
-    <nav>
-      <div class="menu" id="menu">
-        <a href="index.html">Início</a>
-        <a href="#contato">Contato</a>
-      </div>
-    </nav>
-  </header>
+    <section id="contato" class="contato-redes">
+        <h2>Conecte-se Comigo</h2>
+        <p class="subtitulo">Estamos prontos para te atender!</p>
+        <div class="contato-cards">
+            <div class="contato-card">
+                <h3><img src="img/icons8-instagram-48.png" alt="Instagram"></h3>
+                <p>Siga e acompanhe meu trabalho.</p>
+                <a href="https://www.instagram.com/xartuur/" target="_blank" class="btn-contato btn-insta">Seguir</a>
+            </div>
+            <div class="contato-card">
+                <h3><img src="img/icons8-whatsapp-50.png" alt="WhatsApp"></h3>
+                <p>Converse direto comigo.</p>
+                <a href="https://wa.me/558194872398?text=Oi,%20vi%20seu%20portfólio%20e%20gostaria%20de%20saber%20mais%20sobre%20os%20pacotes%20de%20fotografia." target="_blank" class="btn-contato btn-whats">Conversar</a>
+            </div>
+        </div>
+    </section>
 
-  <section class="gallery">
-    <h2>Noivado</h2>
+    <section id="formulario-contato" class="contato-form-section">
+        <h2>Envie uma Mensagem</h2>
+        <p class="subtitulo">Preencha o formulário para entrar em contato diretamente.</p>
+        <form id="contactForm" action="https://formspree.io/f/contact.xartuur@gmail.com" method="POST">
+            <div class="form-group">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+            </div>
+            <div class="form-group">
+                <label for="email-form">E-mail:</label>
+                <input type="email" id="email-form" name="_replyto" required>
+            </div>
+            <div class="form-group">
+                <label for="mensagem">Mensagem:</label>
+                <textarea id="mensagem" name="mensagem" required></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Enviar</button>
+        </form>
+    </section>
 
-    
-      
-      <div class="gallery-item-wrapper">
-        <img class="gallery-item" src="noivado/n1.jpg" alt="Foto 2" loading="lazy">
-      </div>
+    <footer>
+        <p>Desenvolvido por: <a href="https://github.com/anthony-ricardox" target="_blank">anthony ricardo</a></p>
+    </footer>
 
-      <div class="gallery-item-wrapper">
-        <img class="gallery-item" src="noivado/n2.jpg" alt="Foto 3" loading="lazy">
-      </div>
-
-      <div class="gallery-item-wrapper">
-        <img class="gallery-item" src="noivado/n3.jpg" alt="Foto 4" loading="lazy">
-      </div>
-
-      <div class="gallery-item-wrapper">
-        <img class="gallery-item" src="noivado/n4.jpg" alt="Foto 5" loading="lazy">
-      </div>
-
-      <div class="gallery-item-wrapper">
-        <img class="gallery-item" src="noivado/n5.jpg" alt="Foto 6" loading="lazy">
-      </div>
-
-      <div class="gallery-item-wrapper">
-        <img class="gallery-item" src="noivado/n6.jpg" alt="Foto 7" loading="lazy">
-      </div>
-
-      <div class="gallery-item-wrapper">
-        <img class="gallery-item" src="noivado/pre1.jpeg" alt="Foto 8" loading="lazy">
-      </div>
-
-      <div class="gallery-item-wrapper">
-        <img class="gallery-item" src="noivado/pre2.jpeg" alt="Foto 9" loading="lazy">
-      </div>
-
-      <div class="gallery-item-wrapper">
-        <img class="gallery-item" src="noivado/pre3.jpeg" alt="Foto 10" loading="lazy">
-      </div>
-
-      <div class="gallery-item-wrapper">
-        <img class="gallery-item" src="noivado/pre4.jpeg" alt="Foto 11" loading="lazy">
-      </div>
-
-      <div class="gallery-item-wrapper">
-        <img class="gallery-item" src="noivado/pre5.jpeg" alt="Foto 12" loading="lazy">
-      </div>
-
-      <div class="gallery-item-wrapper">
-        <img class="gallery-item" src="noivado/pre6.jpeg" alt="Foto 13" loading="lazy">
-      </div>
-
-      <div class="gallery-item-wrapper">
-        <img class="gallery-item" src="noivado/pre7.jpeg" alt="Foto 14" loading="lazy">
-      </div>
+    <div id="lightbox" class="lightbox">
+        <span class="close">&times;</span>
+        <span class="image-counter" id="image-counter"></span>
+        <img class="lightbox-content" id="lightbox-img">
+        <a class="prev">&#10094;</a>
+        <a class="next">&#10095;</a>
     </div>
-  </section>
 
-  <section id="contato" class="contato-redes">
-    <h2>Conecte-se Comigo</h2>
-    <p class="subtitulo">Estamos prontos para te atender!</p>
-    <div class="contato-cards">
-        <div class="contato-card">
-            <h3><img src="img/icons8-instagram-48.png" onecte-se Comigo
-            Estamos prontos para te atender!alt="Instagram"></h3>
-            <p>Siga e acompanhe meu trabalho.</p>
-            <a href="https://www.instagram.com/xartuur/" target="_blank" class="btn-contato btn-insta">Seguir</a>
-        </div>
-
-        <div class="contato-card">
-            <h3><img src="img/icons8-whatsapp-50.png" alt="WhatsApp"></h3>
-            <p>Converse direto comigo.</p>
-            <a href="https://wa.me/558194872398?text=Oi,%20vi%20seu%20portfólio%20e%20gostaria%20de%20saber%20mais%20sobre%20os%20pacotes%20de%20fotografia." target="_blank" class="btn-contato btn-whats">Conversar</a>
-        </div>
-    </div>
-</section>
-
-<section id="formulario-contato" class="contato-form-section">
-    <h2>Envie uma Mensagem</h2>
-    <p class="subtitulo">Preencha o formulário para entrar em contato diretamente.</p>
-    <form id="contactForm" action="https://formspree.io/f/contact.xartuur@gmail.com" method="POST">
-        <div class="form-group">
-            <label for="nome">Nome:</label>
-            <input type="text" id="nome" name="nome" required>
-        </div>
-        <div class="form-group">
-            <label for="email-form">E-mail:</label>
-            <input type="email" id="email-form" name="_replyto" required>
-        </div>
-        <div class="form-group">
-            <label for="mensagem">Mensagem:</label>
-            <textarea id="mensagem" name="mensagem" required></textarea>
-        </div>
-        <button type="submit" class="submit-btn">Enviar</button>
-    </form>
-</section>
-
-  <footer>
-    <p>Desenvolvido por: <a href="https://github.com/anthony-ricardox" target="_blank"> anthony ricardo</a>
-        </footer>
-    </p>
-
-
-  <div id="lightbox" class="lightbox">
-    <span class="close">&times;</span>
-    <span class="image-counter" id="image-counter"></span> 
-    <img class="lightbox-content" id="lightbox-img">
-    <a class="prev">&#10094;</a>
-    <a class="next">&#10095;</a>
-  </div>
-
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
