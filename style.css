@@ -118,12 +118,20 @@ nav .menu {
 
 /* ---------------- SOBRE ---------------- */
 .sobre {
+  
   display: flex;
   flex-wrap: wrap;
   padding: 100px 60px;
   padding-top: 20vh;
   gap: 40px;
-  background: #050505;
+  /* background: #050505; */
+  /* background: linear-gradient(to bottom, #000000, #1a1a1a); */
+ background: linear-gradient(135deg, #000000, #0a1a2f); 
+ 
+
+
+
+
 }
 
 .sobre .texto {
@@ -133,16 +141,37 @@ nav .menu {
 
 .sobre h2 {
   color: #ccc;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 26px;
+  font-family: 'Playfair Display', sans-serif;
+  font-size: 30px;
   margin-bottom: 20px;
   padding-top: 3vh;
+   position: relative;
+  display: inline-block;
+  
+}
+.sobre h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  width: 100%;
+  height: 3px;
+  background: #ffffff52;
+  border-radius: 2px;
 }
 
+  
+  
+
+
 .sobre p {
+  font-family: "Open Sans";
   font-size: 18px;
   font-style: italic;
   color: #ffffff;
+  text-indent: 1.2em;
+  letter-spacing: 1px;
+  
 }
 
 /* ---------------- SLIDESHOW ---------------- */
@@ -156,7 +185,8 @@ nav .menu {
   width: 100%;
   display: none;
   border-radius: 4px;
-  box-shadow: 1px 1px 10px rgba(255, 255, 255, 0.137);
+  box-shadow: 1px 1px 10px rgba(255, 255, 255, 0.055);
+  border-radius: 20px;
 }
 
 .slides img:first-child {
@@ -384,21 +414,21 @@ nav .menu {
 }
 
 .btn-insta {
-    background: #d3a8ff;
+    background: #c088f8;
     color: #000;
 }
 
 .btn-insta:hover {
-    background: #b97afc;
+    background: #ae68fa;
 }
 
 .btn-whats {
-    background: #90ee90;
+    background: #81ee81;
     color: #000;
 }
 
 .btn-whats:hover {
-    background: #6ed36e;
+    background: #56d356;
 }
 
 /* ---------------- ESTILOS DE FORMULÁRIO (CORRIGIDOS) ---------------- */
