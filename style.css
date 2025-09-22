@@ -167,10 +167,13 @@ nav .menu {
 .sobre p {
   font-family: "Open Sans";
   font-size: 18px;
-  font-style: italic;
-  color: #ffffff;
-  text-indent: 1.2em;
-  letter-spacing: 1px;
+  font-style: normal;
+  color: #ffffffab;
+  text-indent: 2em;
+  line-height: 2em;
+  letter-spacing: 0.5px;
+  text-align: justify;
+  
   
 }
 
@@ -498,8 +501,22 @@ nav .menu {
 
 @media (max-width: 768px) {
   header { padding: 15px 20px; }
-  .hero { font-size: 22px; }
-  .sobre { flex-direction: column; align-items: center; }
+  .hero { 
+    font-size: 22px; }
+
+  .sobre { 
+    flex-direction: column; 
+    align-items: center; }
+
+    /* Foto primeiro */
+  .slideshow {
+    order: 1;
+    margin-bottom: 20px;
+  }
+  .sobre .texto {
+    order: 2;
+  }
+
   .carousel-track img { width: 200px; }
 
   nav .menu { display: none; }
