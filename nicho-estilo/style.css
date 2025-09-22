@@ -177,9 +177,8 @@ body {
         padding: 0 10px;
     }
     .gallery-item { 
-        width: 100%;
-        
-         max-height: 580px; /* opcional: limite de altura */
+         height: auto;
+         max-height: 400px; /* opcional: limite de altura */
         object-fit: cover; /* muda de cover para contain */
     }
     .lightbox .prev, .lightbox .next {
