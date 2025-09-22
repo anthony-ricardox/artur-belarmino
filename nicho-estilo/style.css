@@ -160,7 +160,7 @@ body {
   }
 
   .gallery-item {
-    height: 350px;
+    height: 400px;
   }
 
   .lightbox .prev,
@@ -181,8 +181,8 @@ body {
   }
 
   .gallery-item {
-    height: auto;       /* ajusta automaticamente */
-    object-fit: contain;/* mostra a foto inteira */
+           /* ajusta automaticamente */
+    object-fit: cover;/* mostra a foto inteira */
   }
 
   .lightbox .prev,
