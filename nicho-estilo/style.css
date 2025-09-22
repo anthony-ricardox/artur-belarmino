@@ -178,7 +178,7 @@ body {
     }
     .gallery-item { 
         width: 100%;
-        height: 95%; 
+        
          max-height: 580px; /* opcional: limite de altura */
         object-fit: cover; /* muda de cover para contain */
     }
