@@ -20,7 +20,22 @@
             -webkit-text-fill-color: transparent;
             background-clip: text;
             color: transparent;
+
+            position: relative;
+            display: inline-block;
+        
         }
+       h2::after{  
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -8px;
+        width: 100%;
+        height: 3px;
+        background: #fbff0052;
+        border-radius: 2px;
+}
+
     </style>
 </head>
 <body>
@@ -33,6 +48,7 @@
         <nav>
             <div class="menu" id="menu">
                 <a href="index.html">Início</a>
+                <a href="index.html#portfolio">Portfólio</a>
                 <a href="#contato">Contato</a>
             </div>
         </nav>
@@ -40,7 +56,7 @@
 
     <section class="gallery">
         <h2> Celebrando o nosso amor</h2>
-
+        <h4>Noivado</h4>
         <div class="gallery-grid">
             <div class="gallery-item-wrapper">
                 <img class="gallery-item" src="noivado/n1.jpg" alt="Foto 1" loading="lazy">
@@ -65,12 +81,14 @@
             <div class="gallery-item-wrapper">
                 <img class="gallery-item" src="noivado/n6.jpg" alt="Foto 6" loading="lazy">
             </div>
-            
+          
            
+               
+         
     </section>
-
+  
     <section id="contato" class="contato-redes">
-        <h2>Conecte-se Comigo</h2>
+        <h1>Conecte-se Comigo</h1>
         <p class="subtitulo">Estamos prontos para te atender!</p>
         <div class="contato-cards">
             <div class="contato-card">
@@ -87,7 +105,7 @@
     </section>
 
     <section id="formulario-contato" class="contato-form-section">
-        <h2>Envie uma Mensagem</h2>
+        <h1>Envie uma Mensagem</h1>
         <p class="subtitulo">Preencha o formulário para entrar em contato diretamente.</p>
         <form id="contactForm" action="https://formspree.io/f/contact.xartuur@gmail.com" method="POST">
             <div class="form-group">

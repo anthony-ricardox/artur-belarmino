@@ -1,7 +1,10 @@
 @charset "UTF-8";
 
 
-
+*{  
+  padding: 0px;
+  margin: 0px;
+}
  
 body {
   background-color: #000;
@@ -30,10 +33,27 @@ body {
 
 .gallery h2 {
   font-size: 5vw;
-  margin-bottom: 40px;
-  padding-top: 15%;
+  margin-bottom: 60px;
+  
+  padding-top: 18%;
   color: #ffffffd5;
   text-shadow: 1px 1px 5px rgba(255, 255, 255, 0.377);
+
+  position: relative;
+  display: inline-block;
+}
+
+.gallery h2::after{  
+  
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  width: 100%;
+  height: 3px;
+  background: #ffffff52;
+  border-radius: 2px;
+
 }
 
 /* =========================
