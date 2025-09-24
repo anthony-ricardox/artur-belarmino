@@ -207,7 +207,7 @@ nav .menu {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.267);
   border: none;
   color: #fff;
   padding: 12px;
@@ -216,8 +216,14 @@ nav .menu {
   border-radius: 50%;
 }
 
+
 .prev { left: 10px; }
 .next { right: 10px; }
+
+.prev:hover,.next:hover{  
+  background-color: rgba(0, 0, 0, 0.671);
+  transition-duration: 0.5s;
+}
 
 /* ---------------- PORTFÓLIO ---------------- */
 .portfolio {
@@ -266,10 +272,10 @@ nav .menu {
 
 .home-btn {
   position: absolute;
-  top: 50%;
+  top: 60%;
   transform: translateY(-50%);
-  background: rgba(0,0,0,0.5);
-  color: white;
+  background: rgba(0, 0, 0, 0.247);
+  color: rgba(255, 251, 251, 0.836);
   border: none;
   padding: 15px;
   cursor: pointer;
@@ -280,7 +286,7 @@ nav .menu {
 }
 
 .home-btn:hover {
-  background: rgba(0,0,0,0.8);
+  background: rgba(0, 0, 0, 0.568);
 }
 
 .home-btn.prev { left: 20px; }
@@ -364,7 +370,7 @@ nav .menu {
 }
 
 .portfolio-btn:hover {
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.767);
 }
 
 .prev-btn { left: -10px; }
