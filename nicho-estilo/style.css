@@ -39,6 +39,7 @@ body {
   display: inline-block;
 }
 
+
 .gallery h2::after{  
   
   content: "";
@@ -50,6 +51,10 @@ body {
   background: #ffffff52;
   border-radius: 2px;
 
+}
+
+.galery h1{ 
+ 
 }
 
 /* =========================
