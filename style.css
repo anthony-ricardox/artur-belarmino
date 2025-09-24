@@ -116,6 +116,9 @@ nav .menu {
   font-size: 36px;
   padding: 20px;
   letter-spacing: 2px;
+
+  padding-top: 120px;
+  box-sizing: border-box;
 }
 
 /* ---------------- SOBRE ---------------- */
@@ -516,7 +519,8 @@ nav .menu {
 @media (max-width: 768px) {
   header { padding: 15px 20px; }
   .hero { 
-    font-size: 22px; }
+    padding-top: 100px;
+    font-size: 24px; }
 
   .sobre { 
     flex-direction: column; 
