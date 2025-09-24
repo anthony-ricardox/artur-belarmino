@@ -19,6 +19,7 @@ if (hamburguer && menu) {
 
 
 // ---------------- CARROSSEL HOME - LOOP INFINITO ----------------
+// ---------------- CARROSSEL HOME - LOOP INFINITO ----------------
 const homeTrack = document.querySelector('.carousel-track');
 const homeImages = homeTrack ? Array.from(homeTrack.children) : [];
 const homePrevBtn = document.querySelector('.home-btn.prev');
@@ -29,7 +30,13 @@ if (homeTrack) {
     let imagesPerPage = 3;
 
     const updateHomeImagesPerPage = () => {
-        imagesPerPage = window.innerWidth < 1024 ? 2 : 3;
+        if (window.innerWidth < 768) {
+            imagesPerPage = 2; // mobile
+        } else if (window.innerWidth < 1024) {
+            imagesPerPage = 2; // tablet
+        } else {
+            imagesPerPage = 3; // desktop
+        }
     };
 
     const updateHomeCarousel = () => {
@@ -49,13 +56,16 @@ if (homeTrack) {
     homePrevBtn.addEventListener('click', () => {
         currentHomeIndex--;
         if (currentHomeIndex < 0) {
-            currentHomeIndex = Math.max(homeImages.length - imagesPerPage, 0);
+            currentHomeIndex = homeImages.length - imagesPerPage;
         }
         updateHomeCarousel();
     });
 
     window.addEventListener('resize', () => {
         updateHomeImagesPerPage();
+        if (currentHomeIndex > homeImages.length - imagesPerPage) {
+            currentHomeIndex = homeImages.length - imagesPerPage;
+        }
         updateHomeCarousel();
     });
 
