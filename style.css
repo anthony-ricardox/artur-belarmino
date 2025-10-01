@@ -385,14 +385,20 @@ nav .menu {
     text-align: center;
     background: #000;
     color: #ffffffd8;
-    padding-top: 30%;
+    padding-top: 20%;
+    
 }
+
+
 
 .contato-redes h1,  .contato-form-section h1 {
     font-size: 2rem;
     font-weight: bold;
     margin-bottom: 10px;
     padding-top: 15%;
+}
+.contato-form-section { 
+  padding-top: 0px;
 }
 
 .contato-redes p.subtitulo, .contato-form-section p.subtitulo {
@@ -531,10 +537,21 @@ nav .menu {
     max-height: 85vh;
     
    }
+   .contato-redes { 
+    padding-top: 30%;
+    
+   }
+  
+
 }
 
 @media (max-width: 768px) {
-  header { padding: 15px 20px; }
+  header { 
+    padding: 15px 20px;} 
+    .contato-redes{ 
+      padding-top: 30%;
+    }
+
   .hero { 
     padding-top: 100px;
     font-size: 24px; }
@@ -552,7 +569,10 @@ nav .menu {
     order: 2;
   }
 
-  .carousel-track img { width: 200px; }
+  .carousel-track
+   img { 
+    width: 200px; 
+  }
 
   nav .menu { display: none; }
   .hamburguer { display: block; }
