@@ -385,7 +385,7 @@ nav .menu {
     text-align: center;
     background: #000;
     color: #ffffffd8;
-    padding-top: 25%;
+    padding-top: 30%;
 }
 
 .contato-redes h1,  .contato-form-section h1 {
@@ -628,3 +628,26 @@ footer a{
 footer a:hover{ 
   color: rgba(0, 225, 255, 0.404);
 }
+
+
+#btnTopo {
+  display: none; /* escondido até rolar */
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: #333;
+  color: white;
+  cursor: pointer;
+  padding: 12px 15px;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+#btnTopo:hover {
+  background-color: #555;
+}
+

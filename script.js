@@ -154,6 +154,32 @@ function plusSlides(n) {
 showSlides(slideIndex);
 
 
+
+
+
+  // Pegar o botão
+  const btnTopo = document.getElementById("btnTopo");
+
+  // Mostrar/esconder botão ao rolar a página
+  window.onscroll = function() {
+    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+      btnTopo.style.display = "block";
+    } else {
+      btnTopo.style.display = "none";
+    }
+  };
+
+  // Voltar para o topo quando clicar
+  btnTopo.onclick = function() {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth" // rolagem suave
+    });
+  };
+
+
+
+
 // ---------------- LIGHTBOX ----------------
 document.addEventListener('DOMContentLoaded', function() {
     const lightbox = document.getElementById('lightbox');
