@@ -1,3 +1,19 @@
+   ScrollReveal().reveal('.sobre', {
+        origin: 'bottom',
+        distance: '50px',
+        duration: 1500,
+        delay: 200,
+        reset: true
+    });
+      ScrollReveal().reveal('#portfolio', {
+        origin: 'bottom',
+        distance: '50px',
+        duration: 1500,
+        delay: 200,
+        reset: true
+    });
+
+
 // ---------------- MENU HAMBÚRGUER ---------------- 
 const hamburguer = document.getElementById('hamburguer');
 const menu = document.getElementById('menu');
