@@ -100,19 +100,24 @@ body {
 /* =========================
    LIGHTBOX
 ========================= */
-.lightbox {
+ .lightbox {
   display: none;
   position: fixed;
-  inset: 0; /* substitui top/left/right/bottom */
+  inset: 0;  
   width: 100%;
   height: 100%;
   background: rgba(0,0,0,0.98);
   justify-content: center;
   align-items: center;
-  z-index: 2000;
+  z-index:  999999;
   backdrop-filter: blur(5px);
   padding: 10px;
   box-sizing: border-box;
+}
+
+
+.lightbox.open {                /* classe que mostra o lightbox */
+  display: flex;
 }
 
 .lightbox-content {
@@ -124,6 +129,8 @@ body {
   border-radius: 8px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
   margin: auto;
+
+   z-index: 2147483648 
 }
 
 .lightbox .close {
