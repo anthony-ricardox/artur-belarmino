@@ -131,7 +131,7 @@ body {
   top: 20px;
   right: 35px;
   font-size: 40px;
-  color: #fff;
+  color: rgba(0, 255, 255, 0.623);
   cursor: pointer;
   transition: color 0.3s;
   z-index: 2001;
