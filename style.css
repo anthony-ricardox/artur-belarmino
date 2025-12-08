@@ -35,8 +35,6 @@ header {
   justify-content: space-between;
   align-items: center;
   z-index: 1000;
-
-  
 }
 
 .logo img {
@@ -540,8 +538,8 @@ nav .menu {
     
    }
    .contato-redes { 
+    padding-top: 30%;
     
-    padding-top: 20px;
    }
   
 
@@ -618,8 +616,6 @@ nav .menu {
 
   /* Ajuste dos cards: 2 no mobile */
   .card { width: calc(50% - 20px); }
-
- 
 }
 
 /* ---------------- ANIMAÇÕES ---------------- */
